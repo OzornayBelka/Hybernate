@@ -17,15 +17,17 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping("/persons/by-city")
-    public ResponseEntity<List<Users>> getByCity (@RequestParam String city) {
+    public ResponseEntity<List<Users>> getByCity(@RequestParam String city) {
         return ResponseEntity.ok(repository.findByCityOfLiving(city));
     }
+
     @GetMapping("/persons/by-age")
     public ResponseEntity<List<Users>> getByAge(@RequestParam int age) {
         return ResponseEntity.ok(repository.findByAgeLessThanOrderByAge(age));
     }
+
     @GetMapping("/persons/by-name-surname")
-    public ResponseEntity<Optional<Users>> getByNameAndSurname(@RequestParam String name, String surname){
+    public ResponseEntity<Optional<Users>> getByNameAndSurname(@RequestParam String name, String surname) {
         return ResponseEntity.ok(repository.findByNameAndSurname(name, surname));
     }
 

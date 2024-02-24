@@ -2,7 +2,6 @@ package com.example.hibernate.entity;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import lombok.*;
 
 import java.util.Objects;
@@ -20,11 +19,7 @@ public class Users {
 
     @Override
     public String toString() {
-        return "Users{" +
-                "usersKey=" + usersKey +
-                ", phone_number='" + phoneNumber + '\'' +
-                ", city_of_living='" + cityOfLiving + '\'' +
-                '}';
+        return "Users{" + "usersKey=" + usersKey + ", phone_number='" + phoneNumber + '\'' + ", city_of_living='" + cityOfLiving + '\'' + '}';
     }
 
     @Override
